@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  font-family: "VT323", monospace;
+}
+
+.content {
+  display: flex;
+  width: 40rem;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  width: 25rem;
+  height: 35rem;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 1px solid #00ff00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.9);
+  animation: glow-pulse 2s infinite alternate;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  width: 85%;
+  padding: 10px;
+  align-items: flex-end;
+  border-radius: 20px;
+  color: #00ff00;
+  box-shadow: 0 0 15px rgba(51, 255, 51, 0.8);
+}
+
+.previous-screen {
+  min-height: 30px;
+  font-size: 20px;
+}
+
+.current-screen {
+  min-height: 32px;
+  font-size: 40px;
+}
+
+.numpads {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 20rem;
+}
+
+.num-btn {
+  flex: 1 1 20%; /* Makes sure each button takes up 25% width */
+  max-width: 25%; /* Ensures only 4 buttons fit per row */
+  height: 4.5rem;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  font-size: 1.8rem;
+  transition: 0.3s;
+  color: #00ff00;
+  background-color: #111111;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+  font-family: "VT323", monospace;
+}
+
+.num-btn:active {
+  transition: transform 0.05s ease-in-out;
+  transform: translateY(3px);
+}
+
+.digits,
+.clear,
+.delete {
+  color: #00ff00;
+  background-color: #111111;
+}
+
+.digits:hover,
+.clear:hover,
+.delete:hover {
+  background-color: #003300;
+  box-shadow: 0 0 10px #33ff33;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.operator {
+  color: #000000;
+  background-color: #33ff33;
+}
+
+.operator:hover {
+  background-color: #66ff66;
+  box-shadow: 0 0 10px #33ff33;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.clear-entry {
+  background-color: #ff9800;
+  color: black;
+}
+
+.clear-entry:hover {
+  background-color: #ffc266;
+  box-shadow: 0 0 10px #ff9800;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+footer {
+  display: flex;
+  background-color: transparent;
+  color: #00ff00;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+footer a {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  text-decoration: underline;
+  background-color: transparent;
+  color: #00ff00;
+  font-size: 1.2rem;
+  gap: 8px;
+  animation: flickerText 1.5s infinite alternate;
+}
+
+footer a:hover {
+  animation: float 3s ease-in-out infinite, flickerText 1.5s infinite alternate;
+}
+
+.github-logo {
+  display: inline-block;
+  background: #00ff00;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  max-width: 28px;
+  max-height: 28px;
+  animation: flicker 1.5s infinite alternate;
+  transition: all 0.3s ease-in-out;
+}
+
+.github-logo:hover {
+  animation: float 3s ease-in-out infinite, flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    box-shadow: 0 0 5px #00ff00;
+  }
+  50% {
+    box-shadow: 0 0 15px #00ff00;
+  }
+  100% {
+    box-shadow: 0 0 10px #00ff00;
+  }
+}
+
+@keyframes flickerText {
+  0% {
+    text-shadow: 0 0 5px #00ff00;
+  }
+  50% {
+    text-shadow: 0 0 15px #00ff00;
+  }
+  100% {
+    text-shadow: 0 0 10px #00ff00;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.9), 0 0 50px rgba(0, 255, 0, 0.7),
+      0 0 80px rgba(0, 255, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(0, 255, 0, 1), 0 0 60px rgba(0, 255, 0, 0.9),
+      0 0 100px rgba(0, 255, 0, 0.7);
+  }
+}
