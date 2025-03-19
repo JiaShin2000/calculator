@@ -19,6 +19,8 @@ body {
   justify-content: center;
   font-family: "VT323", monospace;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  background: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXdra21uYWRmZWU3a2p6Z3NmNzJyNGI3bmozMjJ6anRxbmZobHQyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q9aBxHn9fTqKs/giphy.gif");
+  background-size: auto;
 }
 
 html.dark-theme,
