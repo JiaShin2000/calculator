@@ -12,11 +12,11 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  color: #00ff00;
   margin: 0;
   padding: 0;
   align-items: center;
   justify-content: center;
-  background-color: black;
   font-family: "VT323", monospace;
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
@@ -24,21 +24,25 @@ body {
 html.dark-theme,
 body.dark-theme {
   background-color: black;
+  background: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXdra21uYWRmZWU3a2p6Z3NmNzJyNGI3bmozMjJ6anRxbmZobHQyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q9aBxHn9fTqKs/giphy.gif");
+  background-size: auto;
 }
 
 html.light-theme,
 body.light-theme {
   background-color: white;
+  background: url("https://64.media.tumblr.com/83928a1806eea0bf918c0dff130c9dbc/tumblr_na39k233Xy1r83cqho1_400.gif");
+  background-size: auto;
 }
 
 .light-theme {
   background-color: #f5f5f5;
-  color: black;
+  color: #003300;
 }
 
 .dark-theme {
   background-color: black;
-  color: white;
+  color: #00ff00;
 }
 
 .calculator,
@@ -60,7 +64,8 @@ body.light-theme {
 }
 
 .light-theme .screen {
-  background-color: #d7ffd9;
+  background-color: white;
+  border: 1px solid #004d00;
   color: #004d00;
   box-shadow: 0 0 15px rgba(51, 255, 51, 0.6);
 }
@@ -74,17 +79,29 @@ body.light-theme {
 
 .light-theme .num-btn:hover {
   background-color: #b2ff66;
-  box-shadow: 0 0 15px rgba(51, 255, 51, 0.6);
+  box-shadow: 0 0 15px #33ff3399;
 }
 
 .light-theme .operator {
+  color: #003300;
+  background-color: #cccccc;
+}
+
+.light-theme .operator:hover {
+  background-color: #b2ff66;
+  box-shadow: 0 0 15px #33ff33;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.light-theme .equal {
   background-color: #33cc33;
   color: white;
 }
 
-.light-theme .operator:hover {
+.light-theme .equal:hover {
   background-color: #2eb82e;
   box-shadow: 0 0 15px rgba(46, 184, 46, 0.8);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .light-theme .clear-entry {
@@ -165,13 +182,13 @@ body.light-theme {
 }
 
 .previous-screen {
-  min-height: 30px;
-  font-size: 20px;
+  min-height: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .current-screen {
-  min-height: 32px;
-  font-size: 40px;
+  min-height: 2rem;
+  font-size: 2rem;
 }
 
 .numpads {
@@ -220,11 +237,22 @@ body.light-theme {
 }
 
 .operator {
+  color: #00ff00;
+  background-color: #333333;
+}
+
+.operator:hover {
+  background-color: #003300;
+  box-shadow: 0 0 15px #33ff33;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.equal {
   color: #000000;
   background-color: #33ff33;
 }
 
-.operator:hover {
+.equal:hover {
   background-color: #66ff66;
   box-shadow: 0 0 10px #33ff33;
   transition: box-shadow 0.2s ease-in-out;
@@ -322,21 +350,21 @@ footer a:hover {
 
 @keyframes dark-glow-pulse {
   0% {
-    box-shadow: 0 0 30px rgba(0, 255, 0, 0.9), 0 0 50px rgba(0, 255, 0, 0.7),
+    box-shadow: 0 0 7px rgba(0, 255, 0, 0.9), 0 0 12px rgba(0, 255, 0, 0.7),
       0 0 80px rgba(0, 255, 0, 0.5);
   }
   100% {
-    box-shadow: 0 0 40px rgba(0, 255, 0, 1), 0 0 60px rgba(0, 255, 0, 0.9),
+    box-shadow: 0 0 12px rgba(0, 255, 0, 1), 0 0 18px rgba(0, 255, 0, 0.9),
       0 0 100px rgba(0, 255, 0, 0.7);
   }
 }
 
 @keyframes light-glow-pulse {
   0% {
-    box-shadow: 0 0 7px rgba(0, 255, 0, 0.5), 0 0 12px rgba(0, 255, 0, 0.4);
+    box-shadow: 0 0 7px rgba(0, 77, 0, 0.5), 0 0 12px rgba(0, 77, 0, 0.4);
   }
   100% {
-    box-shadow: 0 0 12px rgba(0, 255, 0, 0.7), 0 0 18px rgba(0, 255, 0, 0.6);
+    box-shadow: 0 0 12px rgba(0, 77, 0, 0.7), 0 0 18px rgba(0, 77, 0, 0.6);
   }
 }
 

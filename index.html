@@ -11,44 +11,42 @@
     />
   </head>
   <body>
-    <!-- <div class="content"> -->
+    <h1>NEO CALCULATOR</h1>
     <div class="calculator">
       <div class="screen">
-        <div class="previous-screen">test</div>
-        <div class="current-screen">test</div>
+        <div class="previous-screen"></div>
+        <div class="current-screen"></div>
       </div>
       <div class="numpads">
-        <button class="clear-entry num-btn">CE</button>
+        <button class="clear-entry num-btn" data-clear>CE</button>
         <button class="toggle-mode num-btn">
           <span class="material-symbols-outlined"> dark_mode </span>
         </button>
         <button class="material-symbols-outlined digits num-btn">
           backspace
         </button>
-        <button class="operator num-btn">+</button>
-        <button class="digits num-btn">1</button>
-        <button class="digits num-btn">2</button>
-        <button class="digits num-btn">3</button>
-        <button class="operator num-btn">-</button>
-        <button class="digits num-btn">4</button>
-        <button class="digits num-btn">5</button>
-        <button class="digits num-btn">6</button>
-        <button class="operator num-btn">*</button>
-        <button class="digits num-btn">7</button>
-        <button class="digits num-btn">8</button>
-        <button class="digits num-btn">9</button>
-        <button class="operator num-btn">÷</button>
-        <button class="digits num-btn">0</button>
-        <button class="digits num-btn">.</button>
-        <button class="digits num-btn">%</button>
-        <button class="operator num-btn">=</button>
+        <button class="operator num-btn" data-operator="÷">÷</button>
+        <button class="digits num-btn" data-number="7">7</button>
+        <button class="digits num-btn" data-number="8">8</button>
+        <button class="digits num-btn" data-number="9">9</button>
+        <button class="operator num-btn" data-operator="x">x</button>
+        <button class="digits num-btn" data-number="4">4</button>
+        <button class="digits num-btn" data-number="5">5</button>
+        <button class="digits num-btn" data-number="6">6</button>
+        <button class="operator num-btn" data-operator="-">-</button>
+        <button class="digits num-btn" data-number="1">1</button>
+        <button class="digits num-btn" data-number="2">2</button>
+        <button class="digits num-btn" data-number="3">3</button>
+        <button class="operator num-btn" data-operator="+">+</button>
+        <button class="digits num-btn" data-operator="%">%</button>
+        <button class="digits num-btn" data-number="0">0</button>
+        <button class="digits num-btn" data-point=".">.</button>
+        <button class="equal num-btn" data-equal>=</button>
       </div>
     </div>
     <!-- </div> -->
     <footer>
-      <a
-        href="https://github.com/JiaShin2000/rock-paper-scissors"
-        target="_blank"
+      <a href="https://github.com/JiaShin2000/neo-calculator" target="_blank"
         >© Designed By Shin
         <img class="github-logo" src="./assets/icons/github-mark.svg"
       /></a>
