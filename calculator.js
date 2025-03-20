@@ -191,6 +191,7 @@ equalButton.addEventListener("click", () => {
   previousValue = "";
   selectedOperator = null;
   updateDisplay();
+  currentValue = "";
 });
 
 clearButton.addEventListener("click", () => {
